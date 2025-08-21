@@ -1,15 +1,15 @@
 class Solution {
   public:
-  void reverseArr(vector<int>&arr,int l,int r){
-      if(l>=r) return ;
-      swap(arr[l], arr[r]);
-      reverseArr(arr,l+1,r-1);
+  void reverseArr(vector<int>&arr,int i,int n){
+      if(i>=n/2) return ;
+      swap(arr[i], arr[n-i-1]);
+      reverseArr(arr,i+1,n);
   }
     void reverseArray(vector<int> &arr) {
         // code here
         int n=arr.size();
         
-        reverseArr(arr,0,n-1);
+        reverseArr(arr,0,n);
         
     }
 };
